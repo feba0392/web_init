@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Page Title</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+<!--
+<form action="ta.php" method="get">
+　BOOKID: <input type="test" name="YourName">
+　<input id= "btnGetBook" type="submit" value="送出表單">
+</form>-->
+
+BOOKID: <input type="text"  id = "Enter_the_Form_Element_for_Book_ID_field"/>
+<button type="button" id= "btnGetBook">Get book</button>
+<button type="button" id= "btnGetBooks">Get books</button>
+Made by M10709310 {{code}} <type="text" />
+<script type="text/javascript">
+//get book
+$("#btnGetBook").click(function(event) {
+ $.ajax({
+ url: "https://www.google.com.tw/",
+ method: "GET",
+ contentType: "application/x-www-form-urlencoded",
+ data: {
+ //bid: $(Enter_the_Form_Element_for_Book_ID_field).val()
+ },
+ success: function(data) {
+ console.log(data);
+
+ },
+ error: function(err, status, errorThrown) {
+ console.log("Data: " + err + "\nStatus: " + status + "\nError: " +
+errorThrown);
+ }
+ });
+ event.preventDefault();
+});
+</script>
+</body>
+</html>
